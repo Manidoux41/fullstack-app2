@@ -17,12 +17,7 @@ const getProducts = async () => {
 };
 
 const getBrands = async () => {
-    const res = await prisma.brand.findMany({
-      select: {
-        id: true,
-        name: true,
-      }
-    });
+    const res = await prisma.brand.findMany();
     return res;
 }
 
